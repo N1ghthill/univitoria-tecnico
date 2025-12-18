@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Univitória Técnico - Cursos Técnicos Profissionalizantes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-content">
+                    <div class="contact-info">
+                        <div><i class="fas fa-phone"></i> (27) 3333-4444</div>
+                        <div><i class="fas fa-envelope"></i> contato@univitoriatec.com</div>
+                        <div><i class="fas fa-map-marker-alt"></i> Vitória, ES</div>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="main-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="Univitória Técnico">
+                        <div class="logo-text">
+                            UNIVITÓRIA TÉCNICO
+                            <span>Cursos Técnicos Profissionalizantes</span>
+                        </div>
+                    </div>
+                    
+                    <nav>
+                        <ul>
+                            <li><a href="#" class="nav-active">Início</a></li>
+                            <li><a href="#cursos">Cursos</a></li>
+                            <li><a href="#categorias">Categorias</a></li>
+                            <li><a href="#sobre">Sobre</a></li>
+                            <li><a href="#contato">Contato</a></li>
+                        </ul>
+                    </nav>
+                    
+                    <div class="header-actions">
+                        <div class="search-box">
+                            <input type="text" placeholder="Buscar curso...">
+                            <button><i class="fas fa-search"></i></button>
+                        </div>
+                        
+                        <div class="user-actions">
+                            <a href="#"><i class="fas fa-user"></i></a>
+                            <a href="#" class="cart-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="cart-count">3</span>
+                            </a>
+                        </div>
+                        
+                        <button class="mobile-menu-btn">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Formação Técnica de Qualidade para o Mercado de Trabalho</h1>
+                <p>Mais de 50 cursos técnicos nas principais áreas do mercado com certificado reconhecido pelo MEC. Invista na sua carreira profissional!</p>
+                <a href="#cursos" class="btn">Ver Todos os Cursos</a>
+                <a href="#categorias" class="btn btn-secondary">Explorar Categorias</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categorias" class="container">
+        <div class="section-title">
+            <h2>Áreas de Especialização</h2>
+            <p>Escolha entre nossas diversas categorias de cursos técnicos e dê o próximo passo na sua carreira profissional</p>
+        </div>
+        
+        <div class="categories">
+            <!-- Saúde -->
+            <div class="category-card" data-category="saude">
+                <div class="category-icon">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+                <div class="category-content">
+                    <h3>Saúde</h3>
+                    <p>Cursos técnicos para atuar na área da saúde com excelência e responsabilidade.</p>
+                    <div class="course-count">12 cursos disponíveis</div>
+                </div>
+            </div>
+            
+            <!-- Administração e Gestão -->
+            <div class="category-card" data-category="administracao">
+                <div class="category-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="category-content">
+                    <h3>Administração e Gestão</h3>
+                    <p>Formação para gestão empresarial, recursos humanos, logística e muito mais.</p>
+                    <div class="course-count">12 cursos disponíveis</div>
+                </div>
+            </div>
+            
+            <!-- Tecnologia e Informática -->
+            <div class="category-card" data-category="tecnologia">
+                <div class="category-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <div class="category-content">
+                    <h3>Tecnologia e Informática</h3>
+                    <p>Cursos de TI, desenvolvimento, redes e tecnologia para o futuro.</p>
+                    <div class="course-count">9 cursos disponíveis</div>
+                </div>
+            </div>
+            
+            <!-- Engenharia e Manutenção -->
+            <div class="category-card" data-category="engenharia">
+                <div class="category-icon">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <div class="category-content">
+                    <h3>Engenharia e Manutenção</h3>
+                    <p>Formação técnica em áreas industriais, mecânica, automação e manutenção.</p>
+                    <div class="course-count">11 cursos disponíveis</div>
+                </div>
+            </div>
+            
+            <!-- Construção e Infraestrutura -->
+            <div class="category-card" data-category="construcao">
+                <div class="category-icon">
+                    <i class="fas fa-hard-hat"></i>
+                </div>
+                <div class="category-content">
+                    <h3>Construção e Infraestrutura</h3>
+                    <p>Cursos para atuar no setor da construção civil, mineração e segurança.</p>
+                    <div class="course-count">7 cursos disponíveis</div>
+                </div>
+            </div>
+            
+            <!-- Serviços -->
+            <div class="category-card" data-category="servicos">
+                <div class="category-icon">
+                    <i class="fas fa-concierge-bell"></i>
+                </div>
+                <div class="category-content">
+                    <h3>Serviços</h3>
+                    <p>Formação técnica em gastronomia, turismo, óptica e outras áreas de serviços.</p>
+                    <div class="course-count">5 cursos disponíveis</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Courses -->
+    <section id="cursos" class="container">
+        <div class="section-title">
+            <h2>Cursos em Destaque</h2>
+            <p>Confira nossos cursos técnicos mais populares e comece sua jornada de qualificação profissional</p>
+        </div>
+        
+        <div class="courses-grid">
+            <!-- Curso 1 -->
+            <div class="course-card">
+                <div class="course-image">
+                    <i class="fas fa-user-nurse"></i>
+                    <div class="course-badge">Mais Vendido</div>
+                </div>
+                <div class="course-content">
+                    <div class="course-category">SAÚDE</div>
+                    <h3>Técnico em Enfermagem</h3>
+                    <p class="course-description">Formação completa para atuar como técnico em enfermagem em hospitais, clínicas e unidades de saúde.</p>
+                    <div class="course-price">
+                        <div>
+                            <div class="price">R$ 1.899,00</div>
+                            <div class="old-price">R$ 2.399,00</div>
+                        </div>
+                        <button class="btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Curso 2 -->
+            <div class="course-card">
+                <div class="course-image">
+                    <i class="fas fa-laptop-medical"></i>
+                    <div class="course-badge">Promoção</div>
+                </div>
+                <div class="course-content">
+                    <div class="course-category">TECNOLOGIA</div>
+                    <h3>Técnico em Desenvolvimento de Sistemas</h3>
+                    <p class="course-description">Aprenda a desenvolver sistemas e aplicações para web e mobile com as tecnologias mais atuais do mercado.</p>
+                    <div class="course-price">
+                        <div>
+                            <div class="price">R$ 2.199,00</div>
+                            <div class="old-price">R$ 2.699,00</div>
+                        </div>
+                        <button class="btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Curso 3 -->
+            <div class="course-card">
+                <div class="course-image">
+                    <i class="fas fa-chart-bar"></i>
+                </div>
+                <div class="course-content">
+                    <div class="course-category">ADMINISTRAÇÃO</div>
+                    <h3>Técnico em Administração</h3>
+                    <p class="course-description">Formação completa em gestão empresarial, processos administrativos e rotinas organizacionais.</p>
+                    <div class="course-price">
+                        <div>
+                            <div class="price">R$ 1.599,00</div>
+                            <div class="old-price">R$ 1.999,00</div>
+                        </div>
+                        <button class="btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Pronto para Transformar sua Carreira?</h2>
+            <p>Escolha um dos mais de 50 cursos técnicos da Univitória Técnico e dê o próximo passo na sua vida profissional com uma formação de qualidade reconhecida pelo mercado.</p>
+            <a href="#cursos" class="btn">Ver Todos os Cursos</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contato">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Univitória Técnico</h3>
+                    <p>Há mais de 15 anos formando profissionais técnicos qualificados para o mercado de trabalho. Educação de qualidade com foco na empregabilidade.</p>
+                    <div class="social-icons" style="margin-top: 20px;">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Cursos por Área</h3>
+                    <ul class="footer-links">
+                        <li><a href="#saude">Cursos Técnicos em Saúde</a></li>
+                        <li><a href="#administracao">Cursos Técnicos em Administração</a></li>
+                        <li><a href="#tecnologia">Cursos Técnicos em Tecnologia</a></li>
+                        <li><a href="#engenharia">Cursos Técnicos em Engenharia</a></li>
+                        <li><a href="#construcao">Cursos Técnicos em Construção</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Início</a></li>
+                        <li><a href="#cursos">Todos os Cursos</a></li>
+                        <li><a href="#categorias">Categorias</a></li>
+                        <li><a href="#sobre">Sobre Nós</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contato</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Av. Vitória, 1234 - Centro, Vitória - ES</li>
+                        <li><i class="fas fa-phone"></i> (27) 3333-4444</li>
+                        <li><i class="fas fa-envelope"></i> contato@univitoriatec.com</li>
+                        <li><i class="fas fa-clock"></i> Segunda a Sexta: 8h às 18h</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Univitória Técnico - Todos os direitos reservados. | CNPJ: 00.000.000/0000-00</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
