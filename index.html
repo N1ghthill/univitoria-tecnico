@@ -4,65 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Univitória Técnico - Cursos Técnicos Profissionalizantes</title>
+    <meta name="description" content="Escola técnica especializada em cursos profissionalizantes reconhecidos pelo MEC em Ipatinga/MG">
+    <meta name="keywords" content="cursos técnicos, profissionalizantes, ensino técnico, formação profissional">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/carrossel.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <!-- Header -->
+    <!-- Header Principal -->
     <header class="header">
         <div class="header-top">
             <div class="container">
                 <div class="header-top-content">
                     <div class="contact-info">
-                        <span><i class="fas fa-phone"></i> (31) 3822-1212</span>
+                        <span><i class="fas fa-phone-alt"></i> (31) 3822-1212</span>
                         <span><i class="fas fa-envelope"></i> contato@univitoriatec.com</span>
                         <span><i class="fas fa-map-marker-alt"></i> Ipatinga/MG</span>
                     </div>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    <div class="social-links">
+                        <a href="https://facebook.com/univitoriatec" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com/univitoriatec" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/5531991234567" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <div class="header-main">
             <div class="container">
                 <div class="header-content">
+                    <!-- Logo -->
                     <a href="index.html" class="logo">
-                        <div class="logo-icon">
-                            <i class="fas fa-graduation-cap"></i>
+                        <div class="logo-img">
+                            <img src="logo.png" alt="Univitória Técnico - Cursos Técnicos Profissionalizantes">
                         </div>
                         <div class="logo-text">
                             <h1>UNIVITÓRIA TÉCNICO</h1>
-                            <p>Cursos Técnicos Profissionalizantes</p>
+                            <p>CURSOS TÉCNICOS PROFISSIONALIZANTES</p>
                         </div>
                     </a>
-                    
-                    <nav class="nav-menu">
+
+                    <!-- Navegação -->
+                    <nav class="main-nav">
                         <ul>
-                            <li><a href="index.html" class="active">Início</a></li>
+                            <li><a href="index.html" class="nav-active">Início</a></li>
                             <li><a href="cursos.html">Cursos</a></li>
                             <li><a href="#categorias">Categorias</a></li>
                             <li><a href="#sobre">Sobre</a></li>
                             <li><a href="#contato">Contato</a></li>
                         </ul>
                     </nav>
-                    
+
+                    <!-- Ações -->
                     <div class="header-actions">
                         <div class="search-box">
-                            <input type="text" placeholder="Buscar curso...">
-                            <button><i class="fas fa-search"></i></button>
+                            <input type="text" placeholder="Buscar curso..." id="searchInput">
+                            <button type="button" aria-label="Buscar"><i class="fas fa-search"></i></button>
                         </div>
-                        <a href="#" class="cart-btn">
+                        <a href="#" class="cart-btn" aria-label="Carrinho">
                             <i class="fas fa-shopping-cart"></i>
                             <span class="cart-count">0</span>
                         </a>
-                        <button class="menu-toggle" id="menuToggle">
+                        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Abrir menu">
                             <i class="fas fa-bars"></i>
                         </button>
                     </div>
@@ -75,62 +81,50 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Formação Técnica de Qualidade para o Mercado de Trabalho</h1>
-                <p class="hero-subtitle">55 cursos técnicos nas principais áreas do mercado com certificado reconhecido pelo MEC. Invista na sua carreira profissional!</p>
+                <h1>FORMAÇÃO TÉCNICA PARA O MERCADO DE TRABALHO</h1>
+                <p class="hero-subtitle">Cursos técnicos reconhecidos pelo MEC com foco na empregabilidade e desenvolvimento profissional. Mais de 15 anos formando profissionais qualificados.</p>
                 <div class="hero-buttons">
-                    <a href="cursos.html" class="btn btn-primary">
-                        <i class="fas fa-graduation-cap"></i> Ver Todos os Cursos
+                    <a href="cursos.html" class="btn btn-primary btn-lg">
+                        <i class="fas fa-graduation-cap"></i> VER TODOS OS CURSOS
                     </a>
-                    <a href="#categorias" class="btn btn-secondary">
-                        <i class="fas fa-search"></i> Explorar Categorias
+                    <a href="#categorias" class="btn btn-secondary btn-lg">
+                        <i class="fas fa-search"></i> EXPLORAR CATEGORIAS
                     </a>
                 </div>
                 
+                <!-- Estatísticas -->
                 <div class="hero-stats">
                     <div class="stat">
                         <div class="stat-number">55</div>
-                        <div class="stat-label">Cursos</div>
+                        <div class="stat-label">CURSOS TÉCNICOS</div>
                     </div>
                     <div class="stat">
                         <div class="stat-number">7</div>
-                        <div class="stat-label">Áreas</div>
+                        <div class="stat-label">ÁREAS DE ATUAÇÃO</div>
                     </div>
                     <div class="stat">
                         <div class="stat-number">15+</div>
-                        <div class="stat-label">Anos</div>
+                        <div class="stat-label">ANOS NO MERCADO</div>
                     </div>
                     <div class="stat">
                         <div class="stat-number">100%</div>
-                        <div class="stat-label">Online</div>
+                        <div class="stat-label">RECONHECIDO PELO MEC</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Carrossel de Cursos -->
-    <section class="carrossel-section">
+    <!-- Cursos em Destaque -->
+    <section class="destaque-section">
         <div class="container">
             <div class="section-header">
-                <h2>Cursos em Destaque</h2>
-                <p>Confira nossos cursos técnicos mais populares</p>
+                <h2>CURSOS EM DESTAQUE</h2>
+                <p>Confira nossos cursos técnicos mais procurados e bem avaliados</p>
             </div>
             
-            <div class="carrossel">
-                <div class="carrossel-track" id="carrosselTrack">
-                    <!-- Gerado por JavaScript -->
-                </div>
-                
-                <button class="carrossel-btn prev" id="prevBtn">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <button class="carrossel-btn next" id="nextBtn">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-                
-                <div class="carrossel-dots" id="carrosselDots">
-                    <!-- Gerado por JavaScript -->
-                </div>
+            <div class="carrossel" id="carrosselCursos">
+                <!-- Carrossel será gerado por JavaScript -->
             </div>
         </div>
     </section>
@@ -139,72 +133,56 @@
     <section id="categorias" class="categorias-section">
         <div class="container">
             <div class="section-header">
-                <h2>Áreas de Especialização</h2>
-                <p>Escolha entre nossas 7 categorias de cursos técnicos</p>
+                <h2>ÁREAS DE ESPECIALIZAÇÃO</h2>
+                <p>Escolha entre nossas 7 categorias de cursos técnicos e dê o próximo passo na sua carreira</p>
             </div>
             
             <div class="categorias-grid">
-                <div class="categoria-card" data-categoria="saude">
-                    <div class="categoria-icon">
-                        <i class="fas fa-heartbeat"></i>
-                    </div>
-                    <h3>Saúde</h3>
-                    <p>11 cursos disponíveis</p>
-                    <a href="cursos.html?categoria=saude" class="categoria-link">Ver Cursos <i class="fas fa-arrow-right"></i></a>
+                <!-- Categorias serão geradas por JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="sobre-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>SOBRE A UNIVITÓRIA TÉCNICO</h2>
+                <p>Mais de 15 anos formando profissionais técnicos de excelência</p>
+            </div>
+            
+            <div class="sobre-content">
+                <div class="sobre-text">
+                    <h3>Nossa Missão</h3>
+                    <p>A Univitória Técnico tem como missão proporcionar educação técnica de qualidade, formando profissionais capacitados e preparados para os desafios do mercado de trabalho.</p>
+                    
+                    <h3>Diferenciais</h3>
+                    <ul class="diferenciais">
+                        <li><i class="fas fa-check-circle"></i> Cursos reconhecidos pelo MEC</li>
+                        <li><i class="fas fa-check-circle"></i> Professores com experiência de mercado</li>
+                        <li><i class="fas fa-check-circle"></i> Material didático atualizado</li>
+                        <li><i class="fas fa-check-circle"></i> Certificado válido em todo território nacional</li>
+                        <li><i class="fas fa-check-circle"></i> Metodologia prática e aplicada</li>
+                    </ul>
                 </div>
                 
-                <div class="categoria-card" data-categoria="administracao">
-                    <div class="categoria-icon">
-                        <i class="fas fa-chart-line"></i>
+                <div class="sobre-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">2000+</div>
+                        <div class="stat-label">Alunos Formados</div>
                     </div>
-                    <h3>Administração</h3>
-                    <p>12 cursos disponíveis</p>
-                    <a href="cursos.html?categoria=administracao" class="categoria-link">Ver Cursos <i class="fas fa-arrow-right"></i></a>
-                </div>
-                
-                <div class="categoria-card" data-categoria="tecnologia">
-                    <div class="categoria-icon">
-                        <i class="fas fa-laptop-code"></i>
+                    <div class="stat-card">
+                        <div class="stat-number">55</div>
+                        <div class="stat-label">Cursos Técnicos</div>
                     </div>
-                    <h3>Tecnologia</h3>
-                    <p>9 cursos disponíveis</p>
-                    <a href="cursos.html?categoria=tecnologia" class="categoria-link">Ver Cursos <i class="fas fa-arrow-right"></i></a>
-                </div>
-                
-                <div class="categoria-card" data-categoria="engenharia">
-                    <div class="categoria-icon">
-                        <i class="fas fa-cogs"></i>
+                    <div class="stat-card">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Professores</div>
                     </div>
-                    <h3>Engenharia</h3>
-                    <p>11 cursos disponíveis</p>
-                    <a href="cursos.html?categoria=engenharia" class="categoria-link">Ver Cursos <i class="fas fa-arrow-right"></i></a>
-                </div>
-                
-                <div class="categoria-card" data-categoria="construcao">
-                    <div class="categoria-icon">
-                        <i class="fas fa-hard-hat"></i>
+                    <div class="stat-card">
+                        <div class="stat-number">15</div>
+                        <div class="stat-label">Anos de Experiência</div>
                     </div>
-                    <h3>Construção</h3>
-                    <p>7 cursos disponíveis</p>
-                    <a href="cursos.html?categoria=construcao" class="categoria-link">Ver Cursos <i class="fas fa-arrow-right"></i></a>
-                </div>
-                
-                <div class="categoria-card" data-categoria="meio-ambiente">
-                    <div class="categoria-icon">
-                        <i class="fas fa-leaf"></i>
-                    </div>
-                    <h3>Meio Ambiente</h3>
-                    <p>1 curso disponível</p>
-                    <a href="cursos.html?categoria=meio-ambiente" class="categoria-link">Ver Curso <i class="fas fa-arrow-right"></i></a>
-                </div>
-                
-                <div class="categoria-card" data-categoria="servicos">
-                    <div class="categoria-icon">
-                        <i class="fas fa-concierge-bell"></i>
-                    </div>
-                    <h3>Serviços</h3>
-                    <p>4 cursos disponíveis</p>
-                    <a href="cursos.html?categoria=servicos" class="categoria-link">Ver Cursos <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -214,44 +192,46 @@
     <section class="cta-section">
         <div class="container">
             <div class="cta-content">
-                <h2>Pronto para Transformar sua Carreira?</h2>
+                <h2>PRONTO PARA TRANSFORMAR SUA CARREIRA?</h2>
                 <p>Escolha um dos 55 cursos técnicos da Univitória Técnico e dê o próximo passo na sua vida profissional com uma formação de qualidade reconhecida pelo mercado.</p>
                 <a href="cursos.html" class="btn btn-primary btn-lg">
-                    <i class="fas fa-rocket"></i> Começar Agora
+                    <i class="fas fa-rocket"></i> INSCREVA-SE AGORA
                 </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer" id="contato">
+    <footer id="contato" class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
                     <div class="footer-logo">
-                        <i class="fas fa-graduation-cap"></i>
+                        <div class="logo-img">
+                            <img src="logo.png" alt="Univitória Técnico">
+                        </div>
                         <div>
                             <h3>UNIVITÓRIA TÉCNICO</h3>
-                            <p>Cursos Técnicos Profissionalizantes</p>
+                            <p>CURSOS TÉCNICOS PROFISSIONALIZANTES</p>
                         </div>
                     </div>
-                    <p class="footer-desc">Há mais de 15 anos formando profissionais técnicos qualificados para o mercado de trabalho.</p>
-                    <div class="footer-social">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <p class="footer-desc">Há mais de 15 anos formando profissionais técnicos qualificados para o mercado de trabalho com cursos reconhecidos pelo MEC.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com/univitoriatec" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com/univitoriatec" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/5531991234567" target="_blank"><i class="fab fa-whatsapp"></i></a>
                         <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 
                 <div class="footer-col">
-                    <h4>Localização</h4>
+                    <h4>LOCALIZAÇÃO</h4>
                     <ul class="footer-list">
                         <li><i class="fas fa-map-marker-alt"></i> Av. 28 de Abril, n 715</li>
-                        <li>Centro - Ipatinga/MG</li>
-                        <li>CEP: 35160-000</li>
+                        <li><i class="fas fa-city"></i> Centro - Ipatinga/MG</li>
+                        <li><i class="fas fa-mail-bulk"></i> CEP: 35160-000</li>
                     </ul>
-                    <h4>Horário de Atendimento</h4>
+                    <h4>HORÁRIO DE ATENDIMENTO</h4>
                     <ul class="footer-list">
                         <li><i class="fas fa-clock"></i> Seg-Sex: 8h às 18h</li>
                         <li><i class="fas fa-clock"></i> Sábado: 8h às 12h</li>
@@ -259,17 +239,17 @@
                 </div>
                 
                 <div class="footer-col">
-                    <h4>Contato</h4>
+                    <h4>CONTATO</h4>
                     <ul class="footer-list">
                         <li><i class="fas fa-phone"></i> (31) 3822-1212</li>
-                        <li><i class="fas fa-whatsapp"></i> (31) 99123-4567</li>
+                        <li><i class="fab fa-whatsapp"></i> (31) 99123-4567</li>
                         <li><i class="fas fa-envelope"></i> contato@univitoriatec.com</li>
                         <li><i class="fas fa-envelope"></i> matricula@univitoriatec.com</li>
                     </ul>
                 </div>
                 
                 <div class="footer-col">
-                    <h4>Links Rápidos</h4>
+                    <h4>LINKS RÁPIDOS</h4>
                     <ul class="footer-links">
                         <li><a href="index.html">Início</a></li>
                         <li><a href="cursos.html">Todos os Cursos</a></li>
@@ -282,19 +262,44 @@
             
             <div class="footer-bottom">
                 <p>&copy; <span id="currentYear"></span> Univitória Técnico - Todos os direitos reservados.</p>
-                <p>CNPJ: 00.000.000/0000-00</p>
+                <p>CNPJ: 00.000.000/0000-00 | Mantenedora: Grupo Educacional Univitória</p>
             </div>
         </div>
     </footer>
+
+    <!-- Modal Carrinho -->
+    <div class="cart-modal-overlay" id="cartModal">
+        <div class="cart-modal">
+            <div class="cart-modal-header">
+                <h3><i class="fas fa-shopping-cart"></i> Seu Carrinho</h3>
+                <button class="close-cart">&times;</button>
+            </div>
+            <div class="cart-modal-body">
+                <div class="cart-empty">
+                    <i class="fas fa-shopping-cart"></i>
+                    <p>Seu carrinho está vazio</p>
+                </div>
+            </div>
+            <div class="cart-modal-footer">
+                <div class="cart-total">
+                    <strong>Total:</strong>
+                    <span>R$ 0,00</span>
+                </div>
+                <button class="btn btn-primary btn-checkout" disabled>Finalizar Compra</button>
+            </div>
+        </div>
+    </div>
 
     <!-- Mobile Menu -->
     <div class="mobile-menu-overlay" id="mobileOverlay"></div>
     <nav class="mobile-menu" id="mobileMenu">
         <div class="mobile-header">
-            <div class="mobile-logo">
-                <i class="fas fa-graduation-cap"></i>
+            <a href="index.html" class="mobile-logo">
+                <div class="logo-img">
+                    <img src="logo.png" alt="Univitória Técnico">
+                </div>
                 <span>UNIVITÓRIA TÉCNICO</span>
-            </div>
+            </a>
             <button class="mobile-close" id="mobileClose">
                 <i class="fas fa-times"></i>
             </button>
@@ -309,11 +314,13 @@
         <div class="mobile-contact">
             <p><i class="fas fa-phone"></i> (31) 3822-1212</p>
             <p><i class="fas fa-map-marker-alt"></i> Ipatinga/MG</p>
+            <p><i class="fas fa-clock"></i> Seg-Sex: 8h às 18h</p>
         </div>
     </nav>
 
     <!-- Scripts -->
-    <script src="js/carrossel.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/carrossel.js" defer></script>
+    <script src="js/carrinho.js" defer></script>
 </body>
 </html>

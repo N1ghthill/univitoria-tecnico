@@ -1,7 +1,18 @@
-/* Carrossel */
+/* ===== CARROSSEL ===== */
 .carrossel-section {
     background-color: var(--light);
     padding: 80px 0;
+    position: relative;
+}
+
+.carrossel-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--secondary) 0%, var(--tertiary) 100%);
 }
 
 .carrossel {
@@ -12,7 +23,7 @@
 
 .carrossel-track {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     gap: 30px;
     padding: 20px 0;
 }
@@ -20,20 +31,32 @@
 .carrossel-item {
     flex: 0 0 calc(33.333% - 20px);
     background-color: var(--white);
-    border-radius: 10px;
+    border-radius: var(--radius);
     overflow: hidden;
     box-shadow: var(--shadow);
     transition: var(--transition);
+    position: relative;
+    border-top: 4px solid var(--secondary);
+}
+
+.carrossel-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--secondary) 0%, var(--tertiary) 100%);
 }
 
 .carrossel-item:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--shadow-lg);
 }
 
 .carrossel-item-image {
     height: 180px;
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -46,12 +69,15 @@
     position: absolute;
     top: 15px;
     right: 15px;
-    background-color: var(--secondary);
+    background: linear-gradient(135deg, var(--secondary) 0%, #EA580C 100%);
     color: var(--white);
     padding: 5px 12px;
     border-radius: 20px;
-    font-size: 12px;
-    font-weight: 600;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
 }
 
 .carrossel-item-content {
@@ -60,19 +86,20 @@
 
 .carrossel-item-category {
     color: var(--primary);
-    font-size: 12px;
-    font-weight: 600;
+    font-size: 11px;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.8px;
     margin-bottom: 10px;
 }
 
 .carrossel-item-title {
     font-size: 18px;
-    color: var(--dark);
+    color: var(--primary-dark);
     margin-bottom: 15px;
     line-height: 1.4;
     min-height: 50px;
+    font-weight: 700;
 }
 
 .carrossel-item-price {
@@ -80,11 +107,13 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--gray-light);
 }
 
 .carrossel-price {
     font-size: 22px;
-    font-weight: 700;
+    font-weight: 800;
     color: var(--secondary);
 }
 
@@ -93,6 +122,7 @@
     color: var(--gray);
     text-decoration: line-through;
     margin-top: 5px;
+    opacity: 0.7;
 }
 
 .carrossel-btn {
@@ -118,6 +148,8 @@
 .carrossel-btn:hover {
     background-color: var(--primary);
     color: var(--white);
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
 }
 
 .carrossel-btn:disabled {
@@ -152,14 +184,17 @@
 }
 
 .carrossel-dot.active {
-    background-color: var(--secondary);
+    background: linear-gradient(135deg, var(--secondary) 0%, #EA580C 100%);
     transform: scale(1.2);
+    box-shadow: 0 4px 8px rgba(249, 115, 22, 0.3);
 }
 
 .carrossel-dot:hover {
     background-color: var(--primary);
+    transform: scale(1.1);
 }
 
+/* Responsividade do Carrossel */
 @media (max-width: 992px) {
     .carrossel-item {
         flex: 0 0 calc(50% - 15px);
