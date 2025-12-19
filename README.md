@@ -1,4 +1,4 @@
-# 🎓 Site Institucional - Template para Escolas Técnicas
+# <div align="center">🎓 Site Institucional - Template para Escolas Técnicas</div>
 
 <div align="center">
 
@@ -43,10 +43,10 @@
 ### **Desenvolvedor Principal**
 **Irving Ruas** - Desenvolvedor Full Stack
 
-- 🌐 **Portfólio**: [irvingruas.dev](https://irvingruas.dev)
+- 🌐 **Portfólio**: [ruas.dev.br](https://ruas.dev.br)
 - 💼 **LinkedIn**: [linkedin.com/in/irvingruas](https://linkedin.com/in/irvingruas)
-- 🐙 **GitHub**: [github.com/irvingruas](https://github.com/irvingruas)
-- 📧 **Email**: [contato@irvingruas.dev](mailto:contato@irvingruas.dev)
+- 🐙 **GitHub**: [github.com/N1ghthill](https://github.com/N1ghthill)
+- 📧 **Email**: [irving@ruas.dev.br](mailto:irving@ruas.dev.br)
 
 ### **Sobre o Desenvolvimento**
 Este projeto foi desenvolvido por **Irving Ruas** como um template completo para sites institucionais de escolas técnicas. O código é open-source e pode ser livremente modificado, mas **atenção às restrições de uso de nomes e marcas**.
@@ -108,12 +108,8 @@ univitoria-template/           # RENOMEIE ESTA PASTA!<br>
     └── carrinho.js      # Sistema de carrinho<br>
 
 <div align="center">
-⚠️ LEMBRE-SE: SUBSTITUA TODAS AS REFERÊNCIAS À "UNIVITÓRIA"!
+⚠️ LEMBRE-SE: SUBSTITUA TODAS AS REFERÊNCIAS À "UNIVITÓRIA"!<br>
 Desenvolvido por Irving Ruas
-
-https://img.shields.io/badge/%F0%9F%8C%90-Portfolio-1E3A8A?style=for-the-badge
-https://img.shields.io/badge/%F0%9F%90%99-GitHub-181717?style=for-the-badge&logo=github&logoColor=white
-https://img.shields.io/badge/%F0%9F%92%BC-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white
 
 Template para Escolas Técnicas - Versão 2.0.0
 </div> ```
