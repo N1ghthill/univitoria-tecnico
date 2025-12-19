@@ -1,7 +1,26 @@
-Copyright © 2024 Univitória Técnico
+MIT License with Brand Restriction
 
-Este software é de propriedade exclusiva da Univitória Técnico
-e não pode ser reproduzido, distribuído ou modificado sem
-autorização expressa por escrito.
+Copyright (c) 2024 Irving Ruas
 
-Para uso educacional, entre em contato para obter permissão.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+1. The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+2. It is STRICTLY PROHIBITED to use the names "Univitória", "Univitória Técnico",
+or any variations of these names in modified or distributed versions of this
+Software for commercial, production, or public purposes without express written
+permission from the copyright holders of these trademarks.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

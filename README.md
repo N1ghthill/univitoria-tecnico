@@ -1,155 +1,168 @@
-# 🎓 Univitória Técnico - Site Institucional
+# 🎓 Site Institucional - Template para Escolas Técnicas
 
 <div align="center">
+
+![License](https://img.shields.io/github/license/irvingruas/univitoria-template?color=blue&style=for-the-badge)
+![Version](https://img.shields.io/badge/version-2.0.0-blue?style=for-the-badge)
+![Status](https://img.shields.io/badge/status-active-success?style=for-the-badge)
 
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
-[![Font Awesome](https://img.shields.io/badge/Font_Awesome-528DD7?style=for-the-badge&logo=font-awesome&logoColor=white)](https://fontawesome.com/)
-[![Google Fonts](https://img.shields.io/badge/Google_Fonts-4285F4?style=for-the-badge&logo=google-fonts&logoColor=white)](https://fonts.google.com/)
 
 </div>
 
 <div align="center">
 
-![Status](https://img.shields.io/badge/Status-Completo-success?style=flat-square)
-![Versão](https://img.shields.io/badge/Versão-2.0.0-blue?style=flat-square)
-![Licença](https://img.shields.io/badge/Licença-Proprietária-red?style=flat-square)
-![Última Atualização](https://img.shields.io/badge/Última%20Atualização-Dezembro%202024-orange?style=flat-square)
+### ⚠️ IMPORTANTE: AVISO LEGAL E DE USO
+
+**Este projeto é um template genérico para escolas técnicas.**
+**Os nomes "Univitória Técnico" e "Univitória" são usados apenas para fins de demonstração.**
+**NÃO utilize estes nomes em produção sem autorização expressa.**
+
+[![Aviso Legal](https://img.shields.io/badge/⚠️-Aviso_Legal_Crítico-red?style=for-the-badge)](#-aviso-legal-e-restrições-de-uso)
 
 </div>
 
-<div align="center">
+## 📖 Índice
 
-![Responsivo](https://img.shields.io/badge/📱-Responsivo-green?style=flat-square)
-![Acessibilidade](https://img.shields.io/badge/♿-Acessível-blue?style=flat-square)
-![SEO](https://img.shields.io/badge/🔍-SEO%20Otimizado-yellow?style=flat-square)
-![Performance](https://img.shields.io/badge/⚡-Performance%20Otimizada-brightgreen?style=flat-square)
-
-</div>
-
-## 📋 Índice
-
-- [✨ Demonstração](#-demonstração)
+- [👨‍💻 Autor e Créditos](#-autor-e-créditos)
+- [⚠️ Aviso Legal e Restrições de Uso](#-aviso-legal-e-restrições-de-uso)
+- [✨ Visão Geral](#-visão-geral)
 - [🚀 Funcionalidades](#-funcionalidades)
-- [🏗️ Arquitetura](#️-arquitetura)
 - [📁 Estrutura do Projeto](#-estrutura-do-projeto)
-- [🛠️ Tecnologias](#️-tecnologias)
-- [🎨 Design System](#-design-system)
-- [⚙️ Configuração](#️-configuração)
-- [📱 Responsividade](#-responsividade)
-- [🔧 Instalação](#-instalação)
-- [🚀 Deploy](#-deploy)
-- [🧪 Testes](#-testes)
-- [🤝 Contribuição](#-contribuição)
-- [📞 Suporte](#-suporte)
+- [🛠️ Instalação](#️-instalação)
+- [⚙️ Uso e Customização](#️-uso-e-customização)
+- [🎯 Tecnologias](#-tecnologias)
+- [🤝 Contribuindo](#-contribuindo)
 - [📄 Licença](#-licença)
+- [📞 Suporte](#-suporte)
 
-## ✨ Demonstração
+## 👨‍💻 Autor e Créditos
 
+### **Desenvolvedor Principal**
+**Irving Ruas** - Desenvolvedor Full Stack
+
+- 🌐 **Portfólio**: [irvingruas.dev](https://irvingruas.dev)
+- 💼 **LinkedIn**: [linkedin.com/in/irvingruas](https://linkedin.com/in/irvingruas)
+- 🐙 **GitHub**: [github.com/irvingruas](https://github.com/irvingruas)
+- 📧 **Email**: [contato@irvingruas.dev](mailto:contato@irvingruas.dev)
+
+### **Sobre o Desenvolvimento**
+Este projeto foi desenvolvido por **Irving Ruas** como um template completo para sites institucionais de escolas técnicas. O código é open-source e pode ser livremente modificado, mas **atenção às restrições de uso de nomes e marcas**.
+
+### **Reconhecimentos**
+- Design inspirado em melhores práticas de UX/UI
+- Código seguindo padrões de desenvolvimento web modernos
+- Foco em acessibilidade e performance
+
+## ⚠️ Aviso Legal e Restrições de Uso
+
+### **⚠️ RESTRIÇÕES CRÍTICAS**
+
+1. **PROIBIDO USAR O NOME "UNIVITÓRIA"**:
+   - O nome "Univitória Técnico", "Univitória" ou qualquer variação
+   - NÃO pode ser usado em produção
+   - NÃO pode ser usado para fins comerciais
+   - É apenas para demonstração no código
+  
+   O que você PODE fazer:
+    ✅ Usar a estrutura de código
+    ✅ Modificar o design
+    ✅ Adaptar para sua escola
+    ✅ Usar em projetos comerciais
+    ✅ Distribuir modificações
+
+   O que você NÃO PODE fazer:
+    ❌ Usar o nome "Univitória"
+    ❌ Afirmar ser afiliado à Univitória
+    ❌ Usar as cores/marca da Univitória
+    ❌ Deixar referências ao nome na produção
+
+2. **SUBSTITUA ANTES DE USAR**:
+   ```html
+   <!-- ❌ NÃO USE -->
+   <title>Univitória Técnico</title>
+   
+   <!-- ✅ SUBSTITUA POR -->
+   <title>Sua Escola Técnica</title>
+
+📁 Estrutura do Projeto
+univitoria-template/           # RENOMEIE ESTA PASTA!<br>
+├── index.html                # Página inicial<br>
+├── cursos.html              # Página de cursos<br>
+├── logo.png                 # SUBSTITUA ESTE LOGO!<br>
+├── favicon.ico             # Ícone do site<br>
+├── LICENSE                 # Licença MIT<br>
+├── README.md              # Esta documentação<br>
+├── .gitignore            # Arquivos ignorados pelo Git<br>
+├── css/                  # Estilos<br>
+│   ├── style.css        # Estilos principais<br>
+│   ├── cursos.css       # Estilos da página de cursos<br>
+│   ├── carrossel.css    # Estilos do carrossel<br>
+│   └── responsive.css   # Estilos responsivos<br>
+└── js/                   # Scripts<br>
+    ├── main.js          # Funcionalidades gerais<br>
+    ├── cursos.js        # Gerenciador de cursos<br>
+    ├── carrossel.js     # Sistema de carrossel<br>
+    └── carrinho.js      # Sistema de carrinho<br>
+
+🛠️ Linux/Mac: replace-names.sh:
 <div align="center">
+#!/bin/bash
 
-### 🌐 Acesse o Site
+# Script para substituir todas as referências à Univitória
+echo "🚀 Iniciando substituição de nomes..."
 
-[![Site Online](https://img.shields.io/badge/🌐-Acessar%20Site-1E3A8A?style=for-the-badge&logo=google-chrome&logoColor=white)](https://n1ghthill.github.io/univitoria-tecnico/)
+# Substituir em arquivos HTML
+find . -name "*.html" -type f -exec sed -i '' 's/Univitória Técnico/Sua Escola Técnica/g' {} +
+find . -name "*.html" -type f -exec sed -i '' 's/univitoriatec\.com/seudominio.com/g' {} +
+find . -name "*.html" -type f -exec sed -i '' 's/contato@univitoriatec\.com/contato@seudominio.com/g' {} +
+find . -name "*.html" -type f -exec sed -i '' 's/(31) 3822-1212/(XX) XXXX-XXXX/g' {} +
+find . -name "*.html" -type f -exec sed -i '' 's/Ipatinga\/MG/Sua Cidade\/UF/g' {} +
 
-### 📱 Visualizações
+# Substituir em arquivos JS
+find . -name "*.js" -type f -exec sed -i '' 's/Univitória Técnico/Sua Escola Técnica/g' {} +
+find . -name "*.js" -type f -exec sed -i '' 's/univitoriatec\.com/seudominio.com/g' {} +
 
-| Desktop | Tablet | Mobile |
-|---------|---------|---------|
-| ![Desktop](https://img.shields.io/badge/🖥️-Desktop%20(1200px+)-blue?style=flat-square) | ![Tablet](https://img.shields.io/badge/📱-Tablet%20(768px-1199px)-purple?style=flat-square) | ![Mobile](https://img.shields.io/badge/📲-Mobile%20(320px-767px)-green?style=flat-square) |
+# Substituir em arquivos CSS
+find . -name "*.css" -type f -exec sed -i '' 's/Univitória Técnico/Sua Escola Técnica/g' {} +
 
+echo "✅ Substituição concluída!"
+echo "⚠️ LEMBRE-SE: Substitua também o arquivo logo.png pelo seu logo!"
+</div>
+🛠️ Windows: replace-names.ps1:
+<div align="left">
+# Script PowerShell para substituir nomes
+Write-Host "🚀 Iniciando substituição de nomes..." -ForegroundColor Green
+
+$files = Get-ChildItem -Recurse -Include *.html, *.js, *.css
+
+foreach ($file in $files) {
+    $content = Get-Content $file.FullName -Raw
+    
+    # Substituições
+    $content = $content -replace 'Univitória Técnico', 'Sua Escola Técnica'
+    $content = $content -replace 'univitoriatec\.com', 'seudominio.com'
+    $content = $content -replace 'contato@univitoriatec\.com', 'contato@seudominio.com'
+    $content = $content -replace '\(31\) 3822-1212', '(XX) XXXX-XXXX'
+    $content = $content -replace 'Ipatinga\/MG', 'Sua Cidade\/UF'
+    
+    Set-Content -Path $file.FullName -Value $content -NoNewline
+}
+
+Write-Host "✅ Substituição concluída!" -ForegroundColor Green
+Write-Host "⚠️ LEMBRE-SE: Substitua também o arquivo logo.png pelo seu logo!" -ForegroundColor Yellow
 </div>
 
-## 🚀 Funcionalidades
+<div align="center">
+⚠️ LEMBRE-SE: SUBSTITUA TODAS AS REFERÊNCIAS À "UNIVITÓRIA"!
+Desenvolvido por Irving Ruas
 
-### ✅ **Catálogo de Cursos**
-![Cursos](https://img.shields.io/badge/📚-55%20Cursos%20Técnicos-FF6B00?style=flat-square)
-![Categorias](https://img.shields.io/badge/🏷️-7%20Categorias-3B82F6?style=flat-square)
+https://img.shields.io/badge/%F0%9F%8C%90-Portfolio-1E3A8A?style=for-the-badge
+https://img.shields.io/badge/%F0%9F%90%99-GitHub-181717?style=for-the-badge&logo=github&logoColor=white
+https://img.shields.io/badge/%F0%9F%92%BC-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white
 
-- Busca por nome do curso
-- Filtros por categoria
-- Ordenação por preço/nome/duração
-- Paginação (12 cursos por página)
+Template para Escolas Técnicas - Versão 2.0.0
+</div> ```
 
-### 🛒 **Sistema de Carrinho**
-![Carrinho](https://img.shields.io/badge/🛒-Carrinho%20Persistente-10B981?style=flat-square)
-![LocalStorage](https://img.shields.io/badge/💾-LocalStorage-FFD700?style=flat-square)
-
-- Adicionar/remover cursos
-- Atualizar quantidades
-- Descontos progressivos
-- Resumo da compra
-
-### 🎡 **Carrossel Interativo**
-![Carrossel](https://img.shields.io/badge/🎡-Cursos%20em%20Destaque-8B5CF6?style=flat-square)
-![Auto-play](https://img.shields.io/badge/⚡-Auto--play%205s-FF6B00?style=flat-square)
-
-- Navegação por setas e dots
-- Touch/swipe para mobile
-- Pausa no hover
-
-### 📱 **Menu Mobile**
-![Mobile Menu](https://img.shields.io/badge/📱-Menu%20Mobile%20Otimizado-3B82F6?style=flat-square)
-![Hamburger](https://img.shields.io/badge/🍔-Hamburger%20Menu-FF6B00?style=flat-square)
-
-- Animação suave
-- Fechamento com ESC
-- Overlay escuro
-
-### 🔍 **SEO & Performance**
-![SEO](https://img.shields.io/badge/🔍-SEO%20Otimizado-FFD700?style=flat-square)
-![Performance](https://img.shields.io/badge/⚡-Performance%20A+-00C853?style=flat-square)
-![Acessibilidade](https://img.shields.io/badge/♿-WCAG%20AA-blue?style=flat-square)
-
-- Meta tags otimizadas
-- HTML semântico
-- ARIA labels
-- Lazy loading ready
-
-### 📈 Estatísticas do Código
-![Linhas de Código](https://img.shields.io/badge/📝-6.500%20linhas%20de%20código-blue?style=flat-square)
-![Arquivos](https://img.shields.io/badge/📁-12%20arquivos-green?style=flat-square)
-![Commits](https://img.shields.io/badge/🔀-45%20commits-orange?style=flat-square)
-
-### 🎯 Métricas de Qualidade
-![Acessibilidade](https://img.shields.io/badge/♿-95%25%20WCAG%20AA-success?style=flat-square)
-![Performance](https://img.shields.io/badge/⚡-92%25%20Lighthouse-brightgreen?style=flat-square)
-![SEO](https://img.shields.io/badge/🔍-98%25%20SEO%20Score-yellow?style=flat-square)
-
-### 👥 Uso
-![Usuários](https://img.shields.io/badge/👥-2.000%2B%20alunos-blue?style=flat-square)
-![Cursos Vendidos](https://img.shields.io/badge/🎓-5.000%2B%20matrículas-green?style=flat-square)
-
-## 🏗️ Arquitetura
-
-```mermaid
-graph TD
-    A[Index.html] --> B[CSS/]
-    A --> C[JS/]
-    
-    B --> B1[style.css]
-    B --> B2[cursos.css]
-    B --> B3[carrossel.css]
-    B --> B4[responsive.css]
-    
-    C --> C1[main.js]
-    C --> C2[cursos.js]
-    C --> C3[carrossel.js]
-    C --> C4[carrinho.js]
-    
-    C1 --> D[Menu Mobile]
-    C1 --> E[Busca]
-    C1 --> F[Navegação]
-    
-    C2 --> G[Filtros]
-    C2 --> H[Paginação]
-    C2 --> I[Modal Detalhes]
-    
-    C3 --> J[Slides]
-    C3 --> K[Auto-play]
-    C3 --> L[Touch]
-    
-    C4 --> M[LocalStorage]
-    C4 --> N[Checkout]
-    C4 --> O[Notificações]
