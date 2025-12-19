@@ -1,8 +1,8 @@
-/* Responsive Design */
+/* responsive.css - VERSÃO SIMPLIFICADA */
 @media (max-width: 1200px) {
     .container {
         max-width: 100%;
-        padding: 0 30px;
+        padding: 0 25px;
     }
 }
 
@@ -11,41 +11,41 @@
         flex-wrap: wrap;
     }
     
-    nav {
+    .main-nav {
         display: none;
         width: 100%;
         order: 3;
-        margin-top: 20px;
+        margin-top: 15px;
         background-color: var(--white);
-        padding: 20px;
+        padding: 15px;
         border-radius: 8px;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
     
-    nav.active {
+    .main-nav.active {
         display: block;
     }
     
-    nav ul {
+    .main-nav ul {
         flex-direction: column;
-        gap: 15px;
+        gap: 10px;
     }
     
-    nav li {
+    .main-nav li {
         width: 100%;
     }
     
-    nav a {
+    .main-nav a {
         display: block;
         padding: 10px;
         border-bottom: 1px solid var(--gray-light);
     }
     
-    nav a.nav-active::after {
+    .main-nav a.nav-active::after {
         display: none;
     }
     
-    nav a.nav-active {
+    .main-nav a.nav-active {
         background-color: var(--blue-light);
         color: var(--white);
         border-radius: 4px;
@@ -56,22 +56,27 @@
     }
     
     .hero h1 {
-        font-size: 38px;
+        font-size: 30px;
     }
     
     .hero p {
-        font-size: 18px;
+        font-size: 16px;
     }
     
     .section-title h2 {
-        font-size: 32px;
+        font-size: 28px;
+    }
+    
+    .categories,
+    .courses-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 768px) {
     .header-top-content {
         flex-direction: column;
-        gap: 10px;
+        gap: 8px;
         text-align: center;
     }
     
@@ -85,19 +90,14 @@
     }
     
     .logo {
-        flex: 1;
-    }
-    
-    .logo-text {
-        font-size: 24px;
-    }
-    
-    .logo-text span {
-        font-size: 16px;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
     }
     
     .header-actions {
-        flex: 0 0 auto;
+        width: 100%;
+        justify-content: space-between;
     }
     
     .search-box input {
@@ -105,47 +105,38 @@
     }
     
     .hero {
-        padding: 70px 0;
+        padding: 60px 0;
     }
     
     .hero h1 {
-        font-size: 32px;
-    }
-    
-    .hero p {
-        font-size: 16px;
+        font-size: 26px;
     }
     
     .section-title {
-        margin: 60px 0 40px;
+        margin: 40px 0 30px;
     }
     
     .section-title h2 {
-        font-size: 28px;
+        font-size: 24px;
     }
     
     .section-title p {
-        font-size: 16px;
-        padding: 0 15px;
+        font-size: 14px;
+        padding: 0 10px;
     }
     
     .btn-secondary {
         margin-left: 0;
-        margin-top: 15px;
+        margin-top: 12px;
         display: inline-block;
     }
     
-    .categories,
-    .courses-grid {
-        gap: 20px;
-    }
-    
     .cta-section {
-        padding: 60px 0;
+        padding: 50px 0;
     }
     
     .cta-section h2 {
-        font-size: 28px;
+        font-size: 26px;
     }
     
     footer {
@@ -153,7 +144,7 @@
     }
     
     .footer-content {
-        gap: 30px;
+        gap: 25px;
     }
 }
 
@@ -169,11 +160,11 @@
     }
     
     .logo img {
-        height: 50px;
+        height: 45px;
     }
     
     .logo-text {
-        font-size: 22px;
+        font-size: 20px;
     }
     
     .search-box input {
@@ -181,32 +172,145 @@
     }
     
     .hero h1 {
-        font-size: 28px;
+        font-size: 24px;
     }
     
-    .categories {
-        grid-template-columns: 1fr;
-    }
-    
+    .categories,
     .courses-grid {
         grid-template-columns: 1fr;
-    }
-    
-    .course-content h3 {
-        font-size: 18px;
-        min-height: auto;
-    }
-    
-    .course-description {
-        min-height: auto;
+        gap: 20px;
     }
     
     .btn {
-        padding: 12px 25px;
+        padding: 10px 20px;
         font-size: 14px;
     }
     
     .footer-content {
         grid-template-columns: 1fr;
+    }
+    
+    /* Menu Mobile Básico */
+    .mobile-menu-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+    
+    .mobile-menu-overlay.active {
+        display: block;
+    }
+    
+    .mobile-nav {
+        position: fixed;
+        top: 0;
+        right: -280px;
+        width: 280px;
+        height: 100%;
+        background: var(--white);
+        z-index: 1000;
+        transition: right 0.3s ease-in-out;
+        padding: 20px;
+        overflow-y: auto;
+    }
+    
+    .mobile-nav.active {
+        right: 0;
+    }
+    
+    .mobile-nav-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid var(--gray-medium);
+    }
+    
+    .mobile-logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .mobile-logo img {
+        height: 35px;
+    }
+    
+    .mobile-logo span {
+        font-weight: 600;
+        font-size: 16px;
+        color: var(--blue-dark);
+    }
+    
+    .mobile-close-btn {
+        background: none;
+        border: none;
+        color: var(--blue-dark);
+        font-size: 24px;
+        cursor: pointer;
+    }
+    
+    .mobile-nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 20px 0;
+    }
+    
+    .mobile-nav li {
+        margin-bottom: 10px;
+    }
+    
+    .mobile-nav a {
+        display: block;
+        padding: 12px 15px;
+        color: var(--gray-dark);
+        text-decoration: none;
+        font-weight: 500;
+        border-radius: 6px;
+        transition: all 0.3s;
+    }
+    
+    .mobile-nav a:hover,
+    .mobile-nav a.nav-active {
+        background: var(--blue-light);
+        color: var(--white);
+    }
+    
+    .mobile-contact {
+        padding-top: 15px;
+        border-top: 1px solid var(--gray-medium);
+        font-size: 14px;
+        color: var(--gray-dark);
+    }
+    
+    .mobile-contact div {
+        margin-bottom: 8px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .mobile-contact i {
+        color: var(--blue-medium);
+        width: 20px;
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .btn,
+    .filtro-btn,
+    .curso-card {
+        min-height: 44px;
+    }
+    
+    .search-box input {
+        font-size: 16px;
     }
 }

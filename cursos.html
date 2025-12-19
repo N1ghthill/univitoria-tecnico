@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todos os Cursos - Univitória Técnico</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cursos.css">
+</head>
+<body>
+    <!-- Header (igual ao index.html) -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-content">
+                    <div class="contact-info">
+                        <span><i class="fas fa-phone"></i> (31) 3822-1212</span>
+                        <span><i class="fas fa-envelope"></i> contato@univitoriatec.com</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Ipatinga/MG</span>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="header-main">
+            <div class="container">
+                <div class="header-content">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="logo-text">
+                            <h1>UNIVITÓRIA TÉCNICO</h1>
+                            <p>Cursos Técnicos Profissionalizantes</p>
+                        </div>
+                    </a>
+                    
+                    <nav class="nav-menu">
+                        <ul>
+                            <li><a href="index.html">Início</a></li>
+                            <li><a href="cursos.html" class="active">Cursos</a></li>
+                            <li><a href="index.html#categorias">Categorias</a></li>
+                            <li><a href="index.html#sobre">Sobre</a></li>
+                            <li><a href="index.html#contato">Contato</a></li>
+                        </ul>
+                    </nav>
+                    
+                    <div class="header-actions">
+                        <div class="search-box">
+                            <input type="text" placeholder="Buscar curso..." id="searchInput">
+                            <button id="searchBtn"><i class="fas fa-search"></i></button>
+                        </div>
+                        <a href="#" class="cart-btn">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </a>
+                        <button class="menu-toggle" id="menuToggle">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner Cursos -->
+    <section class="cursos-banner">
+        <div class="container">
+            <h1>Todos os Cursos Técnicos</h1>
+            <p>55 cursos disponíveis em 7 áreas diferentes</p>
+        </div>
+    </section>
+
+    <!-- Filtros -->
+    <section class="filtros-section">
+        <div class="container">
+            <div class="filtros-wrapper">
+                <div class="filtros-categorias">
+                    <button class="filtro-btn active" data-categoria="todos">Todos</button>
+                    <button class="filtro-btn" data-categoria="saude">Saúde</button>
+                    <button class="filtro-btn" data-categoria="administracao">Administração</button>
+                    <button class="filtro-btn" data-categoria="tecnologia">Tecnologia</button>
+                    <button class="filtro-btn" data-categoria="engenharia">Engenharia</button>
+                    <button class="filtro-btn" data-categoria="construcao">Construção</button>
+                    <button class="filtro-btn" data-categoria="meio-ambiente">Meio Ambiente</button>
+                    <button class="filtro-btn" data-categoria="servicos">Serviços</button>
+                </div>
+                
+                <div class="filtro-busca">
+                    <input type="text" id="buscaInput" placeholder="Buscar por nome do curso...">
+                    <button id="buscaBtn"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lista de Cursos -->
+    <section class="cursos-lista">
+        <div class="container">
+            <div class="cursos-header">
+                <p id="cursosCount">55 cursos encontrados</p>
+                <div class="ordenacao">
+                    <select id="ordenacaoSelect">
+                        <option value="nome">Ordenar por: Nome</option>
+                        <option value="preco-crescente">Preço: Menor para Maior</option>
+                        <option value="preco-decrescente">Preço: Maior para Menor</option>
+                        <option value="duracao">Duração</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="cursos-grid" id="cursosGrid">
+                <!-- Gerado por JavaScript -->
+            </div>
+            
+            <div class="sem-resultados" id="semResultados">
+                <i class="fas fa-search"></i>
+                <h3>Nenhum curso encontrado</h3>
+                <p>Tente ajustar os filtros ou buscar por outro termo.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (igual ao index.html) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <i class="fas fa-graduation-cap"></i>
+                        <div>
+                            <h3>UNIVITÓRIA TÉCNICO</h3>
+                            <p>Cursos Técnicos Profissionalizantes</p>
+                        </div>
+                    </div>
+                    <p class="footer-desc">Há mais de 15 anos formando profissionais técnicos qualificados para o mercado de trabalho.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Localização</h4>
+                    <ul class="footer-list">
+                        <li><i class="fas fa-map-marker-alt"></i> Av. 28 de Abril, n 715</li>
+                        <li>Centro - Ipatinga/MG</li>
+                        <li>CEP: 35160-000</li>
+                    </ul>
+                    <h4>Horário de Atendimento</h4>
+                    <ul class="footer-list">
+                        <li><i class="fas fa-clock"></i> Seg-Sex: 8h às 18h</li>
+                        <li><i class="fas fa-clock"></i> Sábado: 8h às 12h</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <ul class="footer-list">
+                        <li><i class="fas fa-phone"></i> (31) 3822-1212</li>
+                        <li><i class="fas fa-whatsapp"></i> (31) 99123-4567</li>
+                        <li><i class="fas fa-envelope"></i> contato@univitoriatec.com</li>
+                        <li><i class="fas fa-envelope"></i> matricula@univitoriatec.com</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Links Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="cursos.html">Todos os Cursos</a></li>
+                        <li><a href="index.html#categorias">Categorias</a></li>
+                        <li><a href="index.html#sobre">Sobre Nós</a></li>
+                        <li><a href="index.html#contato">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear2"></span> Univitória Técnico - Todos os direitos reservados.</p>
+                <p>CNPJ: 00.000.000/0000-00</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay" id="mobileOverlay2"></div>
+    <nav class="mobile-menu" id="mobileMenu2">
+        <div class="mobile-header">
+            <div class="mobile-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>UNIVITÓRIA TÉCNICO</span>
+            </div>
+            <button class="mobile-close" id="mobileClose2">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="mobile-nav">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="cursos.html" class="active">Cursos</a></li>
+            <li><a href="index.html#categorias">Categorias</a></li>
+            <li><a href="index.html#sobre">Sobre</a></li>
+            <li><a href="index.html#contato">Contato</a></li>
+        </ul>
+        <div class="mobile-contact">
+            <p><i class="fas fa-phone"></i> (31) 3822-1212</p>
+            <p><i class="fas fa-map-marker-alt"></i> Ipatinga/MG</p>
+        </div>
+    </nav>
+
+    <!-- Scripts -->
+    <script src="js/cursos.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
