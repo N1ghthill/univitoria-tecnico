@@ -107,54 +107,6 @@ univitoria-template/           # RENOMEIE ESTA PASTA!<br>
     ├── carrossel.js     # Sistema de carrossel<br>
     └── carrinho.js      # Sistema de carrinho<br>
 
-🛠️ Linux/Mac: replace-names.sh:
-<div align="center">
-#!/bin/bash
-
-# Script para substituir todas as referências à Univitória
-echo "🚀 Iniciando substituição de nomes..."
-
-# Substituir em arquivos HTML
-find . -name "*.html" -type f -exec sed -i '' 's/Univitória Técnico/Sua Escola Técnica/g' {} +
-find . -name "*.html" -type f -exec sed -i '' 's/univitoriatec\.com/seudominio.com/g' {} +
-find . -name "*.html" -type f -exec sed -i '' 's/contato@univitoriatec\.com/contato@seudominio.com/g' {} +
-find . -name "*.html" -type f -exec sed -i '' 's/(31) 3822-1212/(XX) XXXX-XXXX/g' {} +
-find . -name "*.html" -type f -exec sed -i '' 's/Ipatinga\/MG/Sua Cidade\/UF/g' {} +
-
-# Substituir em arquivos JS
-find . -name "*.js" -type f -exec sed -i '' 's/Univitória Técnico/Sua Escola Técnica/g' {} +
-find . -name "*.js" -type f -exec sed -i '' 's/univitoriatec\.com/seudominio.com/g' {} +
-
-# Substituir em arquivos CSS
-find . -name "*.css" -type f -exec sed -i '' 's/Univitória Técnico/Sua Escola Técnica/g' {} +
-
-echo "✅ Substituição concluída!"
-echo "⚠️ LEMBRE-SE: Substitua também o arquivo logo.png pelo seu logo!"
-</div>
-🛠️ Windows: replace-names.ps1:
-<div align="left">
-# Script PowerShell para substituir nomes
-Write-Host "🚀 Iniciando substituição de nomes..." -ForegroundColor Green
-
-$files = Get-ChildItem -Recurse -Include *.html, *.js, *.css
-
-foreach ($file in $files) {
-    $content = Get-Content $file.FullName -Raw
-    
-    # Substituições
-    $content = $content -replace 'Univitória Técnico', 'Sua Escola Técnica'
-    $content = $content -replace 'univitoriatec\.com', 'seudominio.com'
-    $content = $content -replace 'contato@univitoriatec\.com', 'contato@seudominio.com'
-    $content = $content -replace '\(31\) 3822-1212', '(XX) XXXX-XXXX'
-    $content = $content -replace 'Ipatinga\/MG', 'Sua Cidade\/UF'
-    
-    Set-Content -Path $file.FullName -Value $content -NoNewline
-}
-
-Write-Host "✅ Substituição concluída!" -ForegroundColor Green
-Write-Host "⚠️ LEMBRE-SE: Substitua também o arquivo logo.png pelo seu logo!" -ForegroundColor Yellow
-</div>
-
 <div align="center">
 ⚠️ LEMBRE-SE: SUBSTITUA TODAS AS REFERÊNCIAS À "UNIVITÓRIA"!
 Desenvolvido por Irving Ruas
