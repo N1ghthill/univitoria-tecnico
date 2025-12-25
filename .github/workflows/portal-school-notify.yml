@@ -7,6 +7,7 @@ on:
       - 'src/**'
       - 'public/**'
       - 'package.json'
+      - '.github/workflows/**'   # ← LINHA ADICIONADA!
   pull_request:
     types: [opened, closed, merged]
   release:
@@ -23,15 +24,12 @@ jobs:
           if [ "${{ github.event_name }}" = "push" ]; then
             EMOJI="🚀"
             ACTION="Nova atualização"
-            echo "event_type=push" >> $GITHUB_OUTPUT
           elif [ "${{ github.event_name }}" = "pull_request" ]; then
             EMOJI="🔄"
             ACTION="Pull Request"
-            echo "event_type=pr" >> $GITHUB_OUTPUT
           elif [ "${{ github.event_name }}" = "release" ]; then
             EMOJI="🎉"
             ACTION="Nova versão"
-            echo "event_type=release" >> $GITHUB_OUTPUT
           fi
           
           echo "emoji=$EMOJI" >> $GITHUB_OUTPUT
@@ -52,8 +50,9 @@ jobs:
             ${{ github.event.head_commit && format('📝 **Commit:** {0}', github.event.head_commit.message) }}
             ${{ github.event.pull_request && format('🔗 **PR:** {0}', github.event.pull_request.title) }}
             
-            🌐 **Acessar portal:** (coloque seu link aqui)
+            🌐 **Acessar portal:** https://n1ghthill.github.io/univitoria-tecnico/
             🔧 **Tech Stack:** React/Node.js/MySQL
+            🏫 **Projeto:** Sistema de gestão escolar
 
       # Notificação especial para releases
       - name: Send Release Details
@@ -77,4 +76,4 @@ jobs:
             • Dashboard administrativo
             
             📊 **Status:** ✅ Em produção
-            🔗 **Acessar:** (https://n1ghthill.github.io/univitoria-tecnico/)
+            🔗 **Acessar:** https://n1ghthill.github.io/univitoria-tecnico/
