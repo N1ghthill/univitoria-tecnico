@@ -1,39 +1,32 @@
 # .github/workflows/portal-school-notify.yml
 name: Portal Escola Updates
+
 on:
   push:
-    branches: [main]
+    branches: [ main ]
 
 jobs:
   notify-discord:
     runs-on: ubuntu-latest
     steps:
-      - name: Send Discord Embed
-        uses: tsickert/discord-webhook@v5.2.0
+      - name: Enviar notificação para o Discord
+        uses: tsickert/discord-webhook@v7.0.0
         with:
           webhook-url: ${{ secrets.DISCORD_WEBHOOK_URL }}
-          embed: |
-            {
-              "title": "🏫 Portal Escola - Nova Atualização",
-              "color": 4886754,
-              "fields": [
-                {
-                  "name": "Repositório",
-                  "value": "${{ github.repository }}",
-                  "inline": true
-                },
-                {
-                  "name": "Autor",
-                  "value": "${{ github.actor }}",
-                  "inline": true
-                },
-                {
-                  "name": "Commit",
-                  "value": "${{ github.event.head_commit.message }}"
-                }
-              ],
-              "footer": {
-                "text": "Portal Escola Técnica • $(date +'%d/%m/%Y %H:%M')"
-              },
-              "url": "https://github.com/${{ github.repository }}/commit/${{ github.sha }}"
-            }
+
+          # Mensagem de texto acima do embed (opcional)
+          content: "🚀 Novo push no Portal Escola"
+
+          # Dados principais do embed
+          embed-title: "🏫 Portal Escola - Nova Atualização"
+          embed-url: "https://github.com/${{ github.repository }}/commit/${{ github.sha }}"
+          embed-description: |
+            **Repositório:** ${{ github.repository }}
+            **Autor:** ${{ github.actor }}
+            **Commit:** ${{ github.event.head_commit.message }}
+
+          # Cor do embed (inteiro decimal)
+          embed-color: 4886754
+
+          # Footer simples (sem date shell)
+          embed-footer-text: "Portal Escola Técnica • ambiente GitHub Actions"
