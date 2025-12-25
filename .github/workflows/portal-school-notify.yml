@@ -2,34 +2,38 @@
 name: Portal Escola Updates
 on:
   push:
-    branches: [ main, develop ]
-    paths:
-      - 'src/**'
-      - 'public/**'
-      - 'package.json'
-      - '.github/workflows/**'
+    branches: [main]
 
 jobs:
   notify-discord:
     runs-on: ubuntu-latest
     steps:
-      - name: Send Discord Notification
-        uses: appleboy/discord-action@v1.0.0
+      - name: Send Discord Embed
+        uses: tsickert/discord-webhook@v5.2.0
         with:
-          webhook_id: ${{ secrets.DISCORD_WEBHOOK_ID }}
-          webhook_token: ${{ secrets.DISCORD_WEBHOOK_TOKEN }}
-          username: "Portal Escola Bot"
-          avatar_url: "https://cdn-icons-png.flaticon.com/512/2232/2232688.png"
-          message: |
-            🚀 **PORTAL ESCOLA - Nova Atualização**
-            
-            📌 **Repositório:** ${{ github.event.repository.name }}
-            👨‍💻 **Por:** ${{ github.actor }}
-            📝 **Commit:** ${{ github.event.head_commit.message }}
-            🔗 **Ver commit:** https://github.com/${{ github.repository }}/commit/${{ github.sha }}
-            
-            🌐 **Acessar portal:** https://n1ghthill.github.io/univitoria-tecnico/
-            🔧 **Tech Stack:** React/Node.js/MySQL
-            
-            ---
-            🏫 *Sistema de gestão escolar em desenvolvimento ativo*
+          webhook-url: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          embed: |
+            {
+              "title": "🏫 Portal Escola - Nova Atualização",
+              "color": 4886754,
+              "fields": [
+                {
+                  "name": "Repositório",
+                  "value": "${{ github.repository }}",
+                  "inline": true
+                },
+                {
+                  "name": "Autor",
+                  "value": "${{ github.actor }}",
+                  "inline": true
+                },
+                {
+                  "name": "Commit",
+                  "value": "${{ github.event.head_commit.message }}"
+                }
+              ],
+              "footer": {
+                "text": "Portal Escola Técnica • $(date +'%d/%m/%Y %H:%M')"
+              },
+              "url": "https://github.com/${{ github.repository }}/commit/${{ github.sha }}"
+            }
