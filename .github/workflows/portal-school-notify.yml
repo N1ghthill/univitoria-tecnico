@@ -7,73 +7,29 @@ on:
       - 'src/**'
       - 'public/**'
       - 'package.json'
-      - '.github/workflows/**'   # ← LINHA ADICIONADA!
-  pull_request:
-    types: [opened, closed, merged]
-  release:
-    types: [published]
+      - '.github/workflows/**'
 
 jobs:
   notify-discord:
     runs-on: ubuntu-latest
     steps:
-      - name: Format Portal Message
-        id: format
-        run: |
-          # Detecta tipo de evento
-          if [ "${{ github.event_name }}" = "push" ]; then
-            EMOJI="🚀"
-            ACTION="Nova atualização"
-          elif [ "${{ github.event_name }}" = "pull_request" ]; then
-            EMOJI="🔄"
-            ACTION="Pull Request"
-          elif [ "${{ github.event_name }}" = "release" ]; then
-            EMOJI="🎉"
-            ACTION="Nova versão"
-          fi
-          
-          echo "emoji=$EMOJI" >> $GITHUB_OUTPUT
-          echo "action=$ACTION" >> $GITHUB_OUTPUT
-
-      - name: Send to Discord
-        if: github.event_name != 'release'
-        uses: appleboy/discord-action@master
+      - name: Send Discord Notification
+        uses: appleboy/discord-action@v1.0.0
         with:
           webhook_id: ${{ secrets.DISCORD_WEBHOOK_ID }}
           webhook_token: ${{ secrets.DISCORD_WEBHOOK_TOKEN }}
+          username: "Portal Escola Bot"
+          avatar_url: "https://cdn-icons-png.flaticon.com/512/2232/2232688.png"
           message: |
-            ${{ steps.format.outputs.emoji }} **PORTAL ESCOLA** - ${{ steps.format.outputs.action }}
+            🚀 **PORTAL ESCOLA - Nova Atualização**
             
             📌 **Repositório:** ${{ github.event.repository.name }}
             👨‍💻 **Por:** ${{ github.actor }}
-            
-            ${{ github.event.head_commit && format('📝 **Commit:** {0}', github.event.head_commit.message) }}
-            ${{ github.event.pull_request && format('🔗 **PR:** {0}', github.event.pull_request.title) }}
+            📝 **Commit:** ${{ github.event.head_commit.message }}
+            🔗 **Ver commit:** https://github.com/${{ github.repository }}/commit/${{ github.sha }}
             
             🌐 **Acessar portal:** https://n1ghthill.github.io/univitoria-tecnico/
             🔧 **Tech Stack:** React/Node.js/MySQL
-            🏫 **Projeto:** Sistema de gestão escolar
-
-      # Notificação especial para releases
-      - name: Send Release Details
-        if: github.event_name == 'release'
-        uses: appleboy/discord-action@master
-        with:
-          webhook_id: ${{ secrets.DISCORD_WEBHOOK_ID }}
-          webhook_token: ${{ secrets.DISCORD_WEBHOOK_TOKEN }}
-          message: |
-            🎊 **NOVA VERSÃO DO PORTAL ESCOLA!** 🎊
             
-            **Versão:** ${{ github.event.release.tag_name }}
-            **Notas da versão:**
-            ```
-            ${{ github.event.release.body }}
-            ```
-            
-            🚀 **Novidades desta versão:**
-            • Sistema de notas implementado
-            • Portal do professor
-            • Dashboard administrativo
-            
-            📊 **Status:** ✅ Em produção
-            🔗 **Acessar:** https://n1ghthill.github.io/univitoria-tecnico/
+            ---
+            🏫 *Sistema de gestão escolar em desenvolvimento ativo*
