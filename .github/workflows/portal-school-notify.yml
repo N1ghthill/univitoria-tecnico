@@ -13,13 +13,11 @@ jobs:
         with:
           webhook-url: ${{ secrets.DISCORD_WEBHOOK_URL }}
           content: "🚀 Novo push no Portal Escola"
-
           embed-title: "🏫 Portal Escola - Nova Atualização"
-          embed-url: "https://github.com/N1ghthill/univitoria-tecnico"
+          embed-url: "https://github.com/${{ github.repository }}/commit/${{ github.sha }}"
           embed-description: |
             **Repositório:** ${{ github.repository }}
             **Autor:** ${{ github.actor }}
             **Commit:** ${{ github.event.head_commit.message }}
-
           embed-color: 4886754
           embed-footer-text: "Portal Escola Técnica • ambiente GitHub Actions"
