@@ -1,0 +1,80 @@
+# .github/workflows/portal-school-notify.yml
+name: Portal Escola Updates
+on:
+  push:
+    branches: [ main, develop ]
+    paths:
+      - 'src/**'
+      - 'public/**'
+      - 'package.json'
+  pull_request:
+    types: [opened, closed, merged]
+  release:
+    types: [published]
+
+jobs:
+  notify-discord:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Format Portal Message
+        id: format
+        run: |
+          # Detecta tipo de evento
+          if [ "${{ github.event_name }}" = "push" ]; then
+            EMOJI="🚀"
+            ACTION="Nova atualização"
+            echo "event_type=push" >> $GITHUB_OUTPUT
+          elif [ "${{ github.event_name }}" = "pull_request" ]; then
+            EMOJI="🔄"
+            ACTION="Pull Request"
+            echo "event_type=pr" >> $GITHUB_OUTPUT
+          elif [ "${{ github.event_name }}" = "release" ]; then
+            EMOJI="🎉"
+            ACTION="Nova versão"
+            echo "event_type=release" >> $GITHUB_OUTPUT
+          fi
+          
+          echo "emoji=$EMOJI" >> $GITHUB_OUTPUT
+          echo "action=$ACTION" >> $GITHUB_OUTPUT
+
+      - name: Send to Discord
+        if: github.event_name != 'release'
+        uses: appleboy/discord-action@master
+        with:
+          webhook_id: ${{ secrets.DISCORD_WEBHOOK_ID }}
+          webhook_token: ${{ secrets.DISCORD_WEBHOOK_TOKEN }}
+          message: |
+            ${{ steps.format.outputs.emoji }} **PORTAL ESCOLA** - ${{ steps.format.outputs.action }}
+            
+            📌 **Repositório:** ${{ github.event.repository.name }}
+            👨‍💻 **Por:** ${{ github.actor }}
+            
+            ${{ github.event.head_commit && format('📝 **Commit:** {0}', github.event.head_commit.message) }}
+            ${{ github.event.pull_request && format('🔗 **PR:** {0}', github.event.pull_request.title) }}
+            
+            🌐 **Acessar portal:** (coloque seu link aqui)
+            🔧 **Tech Stack:** React/Node.js/MySQL
+
+      # Notificação especial para releases
+      - name: Send Release Details
+        if: github.event_name == 'release'
+        uses: appleboy/discord-action@master
+        with:
+          webhook_id: ${{ secrets.DISCORD_WEBHOOK_ID }}
+          webhook_token: ${{ secrets.DISCORD_WEBHOOK_TOKEN }}
+          message: |
+            🎊 **NOVA VERSÃO DO PORTAL ESCOLA!** 🎊
+            
+            **Versão:** ${{ github.event.release.tag_name }}
+            **Notas da versão:**
+            ```
+            ${{ github.event.release.body }}
+            ```
+            
+            🚀 **Novidades desta versão:**
+            • Sistema de notas implementado
+            • Portal do professor
+            • Dashboard administrativo
+            
+            📊 **Status:** ✅ Em produção
+            🔗 **Acessar:** (https://n1ghthill.github.io/univitoria-tecnico/)
