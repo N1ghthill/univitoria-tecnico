@@ -15,7 +15,7 @@ jobs:
           content: "🚀 Novo push no Portal Escola"
 
           embed-title: "🏫 Portal Escola - Nova Atualização"
-          embed-url: "https://github.com/${{ github.repository }}/commit/${{ github.sha }}"
+          # REMOVE embed-url por enquanto
           embed-description: |
             **Repositório:** ${{ github.repository }}
             **Autor:** ${{ github.actor }}
