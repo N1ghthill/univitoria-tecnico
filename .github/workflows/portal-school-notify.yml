@@ -15,4 +15,3 @@ jobs:
         with:
           webhook-url: ${{ secrets.DISCORD_WEBHOOK_URL }}
           raw-data: .github/discord-payload.json
-
