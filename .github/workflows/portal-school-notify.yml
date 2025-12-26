@@ -8,18 +8,11 @@ jobs:
   notify-discord:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+
       - name: Enviar notificação para o Discord
         uses: tsickert/discord-webhook@v7.0.0
         with:
           webhook-url: ${{ secrets.DISCORD_WEBHOOK_URL }}
-          content: "🚀 Novo push no Portal Escola"
+          raw-data: .github/discord-payload.json
 
-          embed-title: "🏫 Portal Escola - Nova Atualização"
-          # REMOVE embed-url por enquanto
-          embed-description: |
-            **Repositório:** ${{ github.repository }}
-            **Autor:** ${{ github.actor }}
-            **Commit:** ${{ github.event.head_commit.message }}
-
-          embed-color: 4886754
-          embed-footer-text: "Portal Escola Técnica • ambiente GitHub Actions"
